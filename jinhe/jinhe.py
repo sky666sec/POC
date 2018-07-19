@@ -9,10 +9,10 @@ def sqli_exploit(url):
     for a in payload:
         res = requests.get(url + payload[a])
         if "<script>" not in res.text and res.status_code is 200:
-            print("[*]:" + url + " | ´æÔÚÂ©¶´Ò³Ãæ")
+            print("[*]:" + url + " | å­˜åœ¨æ¼æ´é¡µé¢")
             return
         else:
-        # print("[*]:" + url + " | ²»´æÔÚÂ©¶´Ò³Ãæ")
+            print("[*]:" + url + " | ä¸å­˜åœ¨æ¼æ´é¡µé¢")
             return
 
 def run(url):
@@ -22,7 +22,7 @@ def run(url):
 if __name__ == '__main__':
 
     while True:
-        go = input("(1) µ¥¸ö¼ì²â (2) ÅúÁ¿¼ì²â (exit) ÍË³ö³ÌĞò£º")
+        go = input("(1) å•ä¸ªæ£€æµ‹ (2) æ‰¹é‡æ£€æµ‹ (exit) é€€å‡ºç¨‹åºï¼š")
         if go == 'exit':
             break
         elif go == 1:
@@ -42,4 +42,4 @@ if __name__ == '__main__':
                     print(e)
                     pass
         else:
-            print("±ğÌØÃ´Ï¹¼¸°ÑÊäÈë")
+            print("åˆ«ç‰¹ä¹ˆçå‡ æŠŠè¾“å…¥")
